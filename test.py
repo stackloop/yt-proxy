@@ -10,6 +10,10 @@ YDL_OPTS = {
     "format": "best",
 }
 
+@app.route("/")
+def index():
+    return "Running"
+
 @app.route("/video/<video_id>")
 def video(video_id):
     youtube_url = f"https://www.youtube.com/watch?v={video_id}"
